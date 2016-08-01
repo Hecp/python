@@ -51,5 +51,19 @@ print("pass statements...")
 print("pass 语句什么也不做。它用于那些语法上必须要有什么语句，但程序什么也不做的场合，",
 "另一方面， pass 可以在创建新代码时用来做函数或控制体的占位符。")
 # pass statements
-while True:
-	pass
+# while True:
+#	pass
+
+print("function define...")
+def fib2(n):
+	"返回斐波那契数列数字列表"
+	result = []
+	a, b = 0, 1
+	while a < n:
+		result.append(a)
+		a, b = b, a + b
+	return result
+	
+print("调用 fib2()方法……")
+# f100 = fib2(100)
+# f100
