@@ -67,3 +67,19 @@ def fib2(n):
 print("调用 fib2()方法……")
 # f100 = fib2(100)
 # f100
+
+print("深入函数定义……")
+# 深入函数定义
+print("默认参数值……")
+# 函数定义时参数设置默认值
+def ask_ok(prompt, retries = 4, complaint = "Yes or no, please!"):
+	while True:
+		ok = input(prompt)
+		if ok in ("y", "ye", "yes"):
+			return True
+		if ok in ("n", "no", "nop", "nope"):
+			return False
+		retries = retries - 1
+		if retries < 0:
+			raise IOError("reusenik user")
+		print(complaint)
